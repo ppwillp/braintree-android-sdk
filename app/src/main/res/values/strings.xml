@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BraintreeSDK</string>
+    <string name="begin">GO!</string>
+    <string name="startPayment">Express Checkout</string>
+    <string name="nonceBtn">Complete Payment</string>
+    <string name="sendNonce">Send Nonce to Server</string>
+    <string name="success">Success!</string>
+</resources>
