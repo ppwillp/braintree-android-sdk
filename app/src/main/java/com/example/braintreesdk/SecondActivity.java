@@ -29,6 +29,7 @@ public class SecondActivity extends AppCompatActivity {
     Button ecBtn;
     Button nonceBtn;
     String nonce;
+    String mAuthorization;
 
     private static final String BASE_URL = "https://bt-sdk-android-wpittman.c9users.io";
     @Override
@@ -39,7 +40,7 @@ public class SecondActivity extends AppCompatActivity {
         ecBtn = findViewById(R.id.ecBtn);
         nonceBtn = findViewById(R.id.nonceBtn);
 
-        String mAuthorization = getIntent().getExtras().getString("token");
+        mAuthorization = getIntent().getExtras().getString("token");
 
 
         try {
@@ -81,6 +82,12 @@ public class SecondActivity extends AppCompatActivity {
     public void postNonceToServer(View view) {
         Intent i = new Intent(this, CompleteActivity.class);
         i.putExtra("nonce", nonce);
+        startActivity(i);
+    }
+
+    public void goToDropInUI(View view) {
+        Intent i = new Intent(this, DropInUI.class);
+        i.putExtra("token", mAuthorization);
         startActivity(i);
     }
 
