@@ -87,7 +87,7 @@ public class SecondActivity extends AppCompatActivity {
 
     public void goToDropInUI(View view) {
         Intent i = new Intent(this, DropInUI.class);
-        i.putExtra("token", mAuthorization);
+        //i.putExtra("token", mAuthorization);
         startActivity(i);
     }
 
